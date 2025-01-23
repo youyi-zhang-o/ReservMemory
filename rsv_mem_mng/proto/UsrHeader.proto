@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+enum UsrType {
+    USR_TYPE_UNSPECIFIE = 0;
+    USR_TYPE_PROTO = 1;
+    USR_TYPE_RAW_BUFFER = 2;
+}
+
+message UsrHeader {
+    uint64 offset = 1;
+    uint64 size = 2;
+    uint64 capacity = 3;
+    UsrType usr_type = 4;
+}
+
+message UsrHeaders {
+    map<uint32, UsrHeader> usr_headers = 1;
+}
