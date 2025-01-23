@@ -1,8 +1,0 @@
-syntax = "proto3";
-
-package user;
-
-message UserSettingsData {
-    string username = 1;
-    int32  volume = 2;
-}

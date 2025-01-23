@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+message ModuleARsvData {
+    uint32 data1 = 1;
+    uint32 data2 = 2;
+}
