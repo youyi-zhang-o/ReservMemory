@@ -1,0 +1,68 @@
+[
+{
+  "directory": "/Users/zhangyouyi/developer/cpp/ReservedMemory/temp",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/zhangyouyi/developer/cpp/ReservedMemory -I/Users/zhangyouyi/developer/cpp/ReservedMemory/temp -I/Users/zhangyouyi/developer/cpp/ReservedMemory/application/include -I/Users/zhangyouyi/developer/cpp/ReservedMemory/temp/rsv_mem_mng/generated -std=gnu++17 -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -fPIE -o CMakeFiles/ReservedMemory.dir/dummy.cpp.o -c /Users/zhangyouyi/developer/cpp/ReservedMemory/temp/dummy.cpp",
+  "file": "/Users/zhangyouyi/developer/cpp/ReservedMemory/temp/dummy.cpp",
+  "output": "CMakeFiles/ReservedMemory.dir/dummy.cpp.o"
+},
+{
+  "directory": "/Users/zhangyouyi/developer/cpp/ReservedMemory/temp",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/zhangyouyi/developer/cpp/ReservedMemory -I/Users/zhangyouyi/developer/cpp/ReservedMemory/temp -I/Users/zhangyouyi/developer/cpp/ReservedMemory/application/include -I/Users/zhangyouyi/developer/cpp/ReservedMemory/temp/rsv_mem_mng/generated -std=gnu++17 -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -fPIE -o CMakeFiles/ReservedMemory.dir/main.cpp.o -c /Users/zhangyouyi/developer/cpp/ReservedMemory/main.cpp",
+  "file": "/Users/zhangyouyi/developer/cpp/ReservedMemory/main.cpp",
+  "output": "CMakeFiles/ReservedMemory.dir/main.cpp.o"
+},
+{
+  "directory": "/Users/zhangyouyi/developer/cpp/ReservedMemory/temp/rsv_mem_mng",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DPROTOBUF_USE_DLLS -Drsv_mem_mng_EXPORTS -I/Users/zhangyouyi/developer/cpp/ReservedMemory -I/Users/zhangyouyi/developer/cpp/ReservedMemory/temp -I/Users/zhangyouyi/developer/cpp/ReservedMemory/temp/rsv_mem_mng/generated -isystem /usr/local/include -std=gnu++17 -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -fPIC -o CMakeFiles/rsv_mem_mng.dir/source/CRsvMemMng.cpp.o -c /Users/zhangyouyi/developer/cpp/ReservedMemory/rsv_mem_mng/source/CRsvMemMng.cpp",
+  "file": "/Users/zhangyouyi/developer/cpp/ReservedMemory/rsv_mem_mng/source/CRsvMemMng.cpp",
+  "output": "rsv_mem_mng/CMakeFiles/rsv_mem_mng.dir/source/CRsvMemMng.cpp.o"
+},
+{
+  "directory": "/Users/zhangyouyi/developer/cpp/ReservedMemory/temp/rsv_mem_mng/proto",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DPROTOBUF_USE_DLLS -Drsv_mem_mng_proto_EXPORTS -I/Users/zhangyouyi/developer/cpp/ReservedMemory -I/Users/zhangyouyi/developer/cpp/ReservedMemory/temp -I/Users/zhangyouyi/developer/cpp/ReservedMemory/temp/rsv_mem_mng/generated -isystem /usr/local/include -std=gnu++17 -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -fPIC -o CMakeFiles/rsv_mem_mng_proto.dir/__/generated/UsrHeader.pb.cc.o -c /Users/zhangyouyi/developer/cpp/ReservedMemory/temp/rsv_mem_mng/generated/UsrHeader.pb.cc",
+  "file": "/Users/zhangyouyi/developer/cpp/ReservedMemory/temp/rsv_mem_mng/generated/UsrHeader.pb.cc",
+  "output": "rsv_mem_mng/proto/CMakeFiles/rsv_mem_mng_proto.dir/__/generated/UsrHeader.pb.cc.o"
+},
+{
+  "directory": "/Users/zhangyouyi/developer/cpp/ReservedMemory/temp/rsv_mem_mng/proto",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DPROTOBUF_USE_DLLS -Drsv_mem_mng_proto_EXPORTS -I/Users/zhangyouyi/developer/cpp/ReservedMemory -I/Users/zhangyouyi/developer/cpp/ReservedMemory/temp -I/Users/zhangyouyi/developer/cpp/ReservedMemory/temp/rsv_mem_mng/generated -isystem /usr/local/include -std=gnu++17 -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -fPIC -o CMakeFiles/rsv_mem_mng_proto.dir/__/generated/RawBuf.pb.cc.o -c /Users/zhangyouyi/developer/cpp/ReservedMemory/temp/rsv_mem_mng/generated/RawBuf.pb.cc",
+  "file": "/Users/zhangyouyi/developer/cpp/ReservedMemory/temp/rsv_mem_mng/generated/RawBuf.pb.cc",
+  "output": "rsv_mem_mng/proto/CMakeFiles/rsv_mem_mng_proto.dir/__/generated/RawBuf.pb.cc.o"
+},
+{
+  "directory": "/Users/zhangyouyi/developer/cpp/ReservedMemory/temp/application",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DPROTOBUF_USE_DLLS -Dapplication_EXPORTS -I/Users/zhangyouyi/developer/cpp/ReservedMemory -I/Users/zhangyouyi/developer/cpp/ReservedMemory/temp -I/Users/zhangyouyi/developer/cpp/ReservedMemory/application/include -I/Users/zhangyouyi/developer/cpp/ReservedMemory/temp/rsv_mem_mng/generated -isystem /usr/local/include -std=gnu++17 -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -fPIC -o CMakeFiles/application.dir/source/moduleA.cpp.o -c /Users/zhangyouyi/developer/cpp/ReservedMemory/application/source/moduleA.cpp",
+  "file": "/Users/zhangyouyi/developer/cpp/ReservedMemory/application/source/moduleA.cpp",
+  "output": "application/CMakeFiles/application.dir/source/moduleA.cpp.o"
+},
+{
+  "directory": "/Users/zhangyouyi/developer/cpp/ReservedMemory/temp/application",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DPROTOBUF_USE_DLLS -Dapplication_EXPORTS -I/Users/zhangyouyi/developer/cpp/ReservedMemory -I/Users/zhangyouyi/developer/cpp/ReservedMemory/temp -I/Users/zhangyouyi/developer/cpp/ReservedMemory/application/include -I/Users/zhangyouyi/developer/cpp/ReservedMemory/temp/rsv_mem_mng/generated -isystem /usr/local/include -std=gnu++17 -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -fPIC -o CMakeFiles/application.dir/source/moduleB.cpp.o -c /Users/zhangyouyi/developer/cpp/ReservedMemory/application/source/moduleB.cpp",
+  "file": "/Users/zhangyouyi/developer/cpp/ReservedMemory/application/source/moduleB.cpp",
+  "output": "application/CMakeFiles/application.dir/source/moduleB.cpp.o"
+},
+{
+  "directory": "/Users/zhangyouyi/developer/cpp/ReservedMemory/temp/application/proto",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DPROTOBUF_USE_DLLS -Dapplication_proto_EXPORTS -I/Users/zhangyouyi/developer/cpp/ReservedMemory -I/Users/zhangyouyi/developer/cpp/ReservedMemory/temp -isystem /usr/local/include -std=gnu++17 -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -fPIC -o CMakeFiles/application_proto.dir/__/generated/ModuleARsvData.pb.cc.o -c /Users/zhangyouyi/developer/cpp/ReservedMemory/temp/application/generated/ModuleARsvData.pb.cc",
+  "file": "/Users/zhangyouyi/developer/cpp/ReservedMemory/temp/application/generated/ModuleARsvData.pb.cc",
+  "output": "application/proto/CMakeFiles/application_proto.dir/__/generated/ModuleARsvData.pb.cc.o"
+},
+{
+  "directory": "/Users/zhangyouyi/developer/cpp/ReservedMemory/temp/test",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/zhangyouyi/developer/cpp/ReservedMemory -I/Users/zhangyouyi/developer/cpp/ReservedMemory/temp -I/Users/zhangyouyi/developer/cpp/ReservedMemory/temp/rsv_mem_mng/generated -I/Users/zhangyouyi/developer/cpp/ReservedMemory/application/include -isystem /usr/local/include -std=gnu++17 -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -fPIE -o CMakeFiles/test_exe.dir/__/dummy.cpp.o -c /Users/zhangyouyi/developer/cpp/ReservedMemory/temp/dummy.cpp",
+  "file": "/Users/zhangyouyi/developer/cpp/ReservedMemory/temp/dummy.cpp",
+  "output": "test/CMakeFiles/test_exe.dir/__/dummy.cpp.o"
+},
+{
+  "directory": "/Users/zhangyouyi/developer/cpp/ReservedMemory/temp/test",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/zhangyouyi/developer/cpp/ReservedMemory -I/Users/zhangyouyi/developer/cpp/ReservedMemory/temp -I/Users/zhangyouyi/developer/cpp/ReservedMemory/temp/rsv_mem_mng/generated -I/Users/zhangyouyi/developer/cpp/ReservedMemory/application/include -isystem /usr/local/include -std=gnu++17 -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -fPIE -o CMakeFiles/test_exe.dir/test_dummy.cpp.o -c /Users/zhangyouyi/developer/cpp/ReservedMemory/test/test_dummy.cpp",
+  "file": "/Users/zhangyouyi/developer/cpp/ReservedMemory/test/test_dummy.cpp",
+  "output": "test/CMakeFiles/test_exe.dir/test_dummy.cpp.o"
+},
+{
+  "directory": "/Users/zhangyouyi/developer/cpp/ReservedMemory/temp/test",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/zhangyouyi/developer/cpp/ReservedMemory -I/Users/zhangyouyi/developer/cpp/ReservedMemory/temp -I/Users/zhangyouyi/developer/cpp/ReservedMemory/temp/rsv_mem_mng/generated -I/Users/zhangyouyi/developer/cpp/ReservedMemory/application/include -isystem /usr/local/include -std=gnu++17 -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -fPIE -o CMakeFiles/test_exe.dir/test_rsv_mem_mng.cpp.o -c /Users/zhangyouyi/developer/cpp/ReservedMemory/test/test_rsv_mem_mng.cpp",
+  "file": "/Users/zhangyouyi/developer/cpp/ReservedMemory/test/test_rsv_mem_mng.cpp",
+  "output": "test/CMakeFiles/test_exe.dir/test_rsv_mem_mng.cpp.o"
+}
+]

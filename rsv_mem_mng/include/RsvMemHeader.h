@@ -15,8 +15,4 @@ struct RsvMemHeader {
     uint32_t reserved { 0 };
     // 用户头占用的空间
     uint32_t usrHeadersCapacity { 0 };
-    // 为使用protobuf的用户分配内存 从前往后分 用于保留当前空闲内存首地址相当于保留内存基地址的偏移值
-    uint64_t freeBegin { 0 };
-    // 为使用原生内存管理策略的用户分配内存 从后往前分 大小不允许修改 用于保存当前空闲内存段最后一个字节之后一个字节相对于保留内存基地址的偏移值
-    uint64_t freeEnd { 0 };
 };

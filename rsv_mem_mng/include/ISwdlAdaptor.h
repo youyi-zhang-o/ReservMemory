@@ -1,3 +1,4 @@
+#pragma once
 class ISwdlAdaptor {
 public:
     virtual ~ISwdlAdaptor() = default;

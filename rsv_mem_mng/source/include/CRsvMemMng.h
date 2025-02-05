@@ -6,8 +6,8 @@
 #include <mutex>
 #include "UsrHeader.pb.h"
 #include "rsv_mem_mng/include/IRsvMemMng.h"
-#include <rsv_mem_mng/include/RsvMemHeader.h>
-
+#include "rsv_mem_mng/include/RsvMemHeader.h"
+#include "rsv_mem_mng/include/ISwdlAdaptor.h"
 class CRsvMemMng : public IRsvMemMng {
 public:
     CRsvMemMng();
@@ -20,25 +20,25 @@ public:
     void RegUpgradeAdaptorCreateFunc(RsvMemUpgradeAdaptorCreateFunc&& func) override;
 
     // 注册用户创建函数
-    RsvMemErrCode RegUsrCreateFunc(UsrId id, RsvMemUsrCreateFunc&& createFunc) override;
+    RsvMemErrCode RegUsrCreateFunc(const std::map<UsrId, RsvMemUsrCreateFunc>& createFuncMap) override;
 
     // 获取用户对象
     std::shared_ptr<IRsvMemUsr> GetUsr(UsrId id) override;
-
-    // 注册原始缓冲区用户
-    RsvMemErrCode RegRawBufferUsr(UsrId id, size_t len) override;
-
-    // 获取原始缓冲区
-    RsvMemErrCode GetRawBuffer(UsrId id, RawBuffer& buffer) override;
 
     // 执行升级操作
     RsvMemErrCode Upgrade() override;
 
     // 通知包加载结束
-    bool NotifySwdlEnd() override;
+    void NotifySwdlEnd() override;
 
     // 系统关闭通知
     void OnSystemClose() override;
+
+private:
+    void SaveAll();
+    void Load(UsrId id, const UsrHeader& usrHeader);
+    void SaveOne(UsrId id, const IRsvMemUsr& usr);
+    bool SaveHeader();
 
 private:
     uint8_t* m_baseAddress { nullptr };                    // 保留内存基地址
@@ -50,13 +50,7 @@ private:
     std::map<UsrId, std::shared_ptr<IRsvMemUsr>> m_users;  // 已注册的用户
     std::vector<uint8_t> m_cache;                          // 缓存写操作
     bool m_swdlActive;                                     // 是否处于包加载状态
-    RsvMemUpgradeAdaptorCreateFunc m_upgradeAdaptorFunc;   // 升级适配器创建函数
-    RsvMemUsrCreateFunc m_usrCreateFunc;                   // 用户创建函数
+    std::unique_ptr<IRsvMemUpgradeAdaptor> m_upgradeAdaptor { nullptr };
     std::mutex m_mutex;                                    // 线程安全锁（可选）
-
-    // 将头信息保存到保留内存
-    bool SaveHeader();
-
-    // 刷新缓存到保留内存
-    bool FlushCache();
+    std::unique_ptr<ISwdlAdaptor> m_swdlAdaptor { nullptr };
 };

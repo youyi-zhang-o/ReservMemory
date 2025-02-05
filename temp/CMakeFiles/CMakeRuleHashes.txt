@@ -1,0 +1,4 @@
+# Hashes of file build rules.
+bcfae34aa89be9b38b796a11841bec56 application/generated/ModuleARsvData.pb.h
+77ce24bdc368767193ffa8ee18aabde0 rsv_mem_mng/generated/RawBuf.pb.h
+8a592e069b8205437b15688f34e10f21 rsv_mem_mng/generated/UsrHeader.pb.h

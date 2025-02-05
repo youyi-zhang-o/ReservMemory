@@ -1,21 +1,19 @@
 #pragma once
 
 #include "rsv_mem_mng/include/IRsvMemUsr.h"
+#include <application/generated/ModuleARsvData.pb.h>
 
 class ModuleARsvMemUsr : public IRsvMemUsr {
 public:
     ModuleARsvMemUsr() = default;
     ~ModuleARsvMemUsr() override = default;
-
-    UsrId GetId() override final;
     std::string_view GetName() override final;
     RsvMemErrCode Initialize() override final;
-    void FrameUpgradeRecover(const uint8_t* data, size_t len) override final;
-    RsvMemErrCode GetDataMsg(std::shared_ptr<google::protobuf::Message> dataMsg) override final;
-    RsvMemErrCode Recover(const google::protobuf::Message& dataMsg) override final;
+    void FrameUpgradeRecover(const RawBuffer& buffer) override final;
+    std::shared_ptr<google::protobuf::Message> GetDataMsg() override final;
 
 private:
-    
+    std::shared_ptr<google::protobuf::Message> m_rsvMemData {nullptr};
 };
 
 class ModuleA {

@@ -15,23 +15,26 @@
 class IRsvMemUsr {
 public:
     virtual ~IRsvMemUsr() = default;
-    virtual UsrId GetId() = 0;
     virtual std::string_view GetName() = 0;
     // 初始化时注册到 RsvMemMng 析构时取消注册
     virtual RsvMemErrCode Initialize() = 0;
     // 从老框架升级到新框架时，根据老的解析流程恢复数据
-    virtual void FrameUpgradeRecover(const uint8_t* data, size_t len) = 0;
+    virtual void FrameUpgradeRecover(const RawBuffer& buffer) = 0;
+    // 钩子函数
+    virtual void BeforeLoad() {};
+    virtual void AfterLoad() {};
+    virtual void BeforeSave() {};
+    virtual void AfterSave() {};
     // RsvMemMng 任务体中遍历所有 user，如果是 dirty 的，则触发保存到保留内存
     // RsvMemMng 接收系统复位通知 复位前保存所有 dirty 的数据
-    virtual RsvMemErrCode GetDataMsg(std::shared_ptr<google::protobuf::Message> dataMsg) = 0;
-    // RsvMemMng 提供 Recover 接口，遍历所有的 user 调用其 Recover，操作一般在系统软复位启动初始化时发生
-    virtual RsvMemErrCode Recover(const google::protobuf::Message& dataMsg) = 0;
+    // 自己管理空间的用户通过查询接口得到保留内存的指针，写入通过指针完成，无需设置 dirty
+    virtual std::shared_ptr<google::protobuf::Message> GetDataMsg() = 0;
+    std::shared_mutex& GetSharedMutex() { return m_mutex; }
 
 public:
-    bool m_isDirty { false };
+    std::atomic_bool m_isDirty { false };
 
-protected: 
-    // 多线程互斥操作
+private:
     mutable std::shared_mutex m_mutex;
 };
 
